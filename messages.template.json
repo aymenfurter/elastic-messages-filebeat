@@ -1,0 +1,58 @@
+{
+  "mappings": {
+    "_default_": {
+      "_all": {
+        "enabled": true,
+        "norms": {
+          "enabled": false
+        }
+      },
+      "dynamic_templates": [],
+      "properties": {
+        "timestamp": {
+          "type": "date"
+        },
+        "encrypted": {
+          "type": "string"
+        },
+        "severity" : {
+          "type": "string"
+        },
+        "operationName" : {
+          "type": "string"
+        },
+        "messageDirection" : {
+          "type": "string"
+        },
+        "hostAddress" : {
+          "type": "string"
+        },
+        "transport" : {
+          "type": "string"
+        },
+        "eventType" : {
+          "type": "string"
+        },
+        "address" : {
+          "type": "string"
+        },
+        "hostName": {
+          "type": "string"
+        },
+        "transport": {
+          "type": "string"
+        },
+        "processId": {
+          "type": "string"
+        },
+        "service_namespace": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index.refresh_interval": "5s"
+  },
+  "template": "message-*"
+}

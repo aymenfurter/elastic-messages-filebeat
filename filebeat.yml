@@ -1,0 +1,17 @@
+output.elasticsearch:
+  hosts: ["localhost:9200"]
+  index: "message"
+
+setup.template.name: "message"
+setup.template.pattern: "message-*"
+
+filebeat.inputs:
+- input_type: log
+  json.keys_under_root: false
+  json.overwrite_keys: false
+  json.add_error_key: true
+  paths:
+    - ./messages.json
+
+
+setup.ilm.enabled: false
